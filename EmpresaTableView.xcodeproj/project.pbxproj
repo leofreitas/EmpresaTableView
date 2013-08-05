@@ -18,6 +18,8 @@
 		211F2EC517AD44CB0011A773 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 211F2EC417AD44CB0011A773 /* Default-568h@2x.png */; };
 		211F2EC817AD44CB0011A773 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 211F2EC717AD44CB0011A773 /* ViewController.m */; };
 		211F2ECB17AD44CB0011A773 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 211F2EC917AD44CB0011A773 /* ViewController.xib */; };
+		211F2ED217AD45680011A773 /* empresas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 211F2ED117AD45680011A773 /* empresas.plist */; };
+		211F2ED517AD46E80011A773 /* Empresas.m in Sources */ = {isa = PBXBuildFile; fileRef = 211F2ED417AD46E80011A773 /* Empresas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		211F2EC617AD44CB0011A773 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		211F2EC717AD44CB0011A773 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		211F2ECA17AD44CB0011A773 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		211F2ED117AD45680011A773 /* empresas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = empresas.plist; sourceTree = "<group>"; };
+		211F2ED317AD46E80011A773 /* Empresas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Empresas.h; sourceTree = "<group>"; };
+		211F2ED417AD46E80011A773 /* Empresas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Empresas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +93,10 @@
 				211F2EC617AD44CB0011A773 /* ViewController.h */,
 				211F2EC717AD44CB0011A773 /* ViewController.m */,
 				211F2EC917AD44CB0011A773 /* ViewController.xib */,
+				211F2ED117AD45680011A773 /* empresas.plist */,
 				211F2EB517AD44CB0011A773 /* Supporting Files */,
+				211F2ED317AD46E80011A773 /* Empresas.h */,
+				211F2ED417AD46E80011A773 /* Empresas.m */,
 			);
 			path = EmpresaTableView;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				211F2EC317AD44CB0011A773 /* Default@2x.png in Resources */,
 				211F2EC517AD44CB0011A773 /* Default-568h@2x.png in Resources */,
 				211F2ECB17AD44CB0011A773 /* ViewController.xib in Resources */,
+				211F2ED217AD45680011A773 /* empresas.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				211F2EBB17AD44CB0011A773 /* main.m in Sources */,
 				211F2EBF17AD44CB0011A773 /* AppDelegate.m in Sources */,
 				211F2EC817AD44CB0011A773 /* ViewController.m in Sources */,
+				211F2ED517AD46E80011A773 /* Empresas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +306,7 @@
 				211F2ED017AD44CB0011A773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

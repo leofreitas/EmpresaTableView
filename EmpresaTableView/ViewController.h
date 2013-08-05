@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>{
+    NSMutableArray *empresas;
+}
+
+@property (retain, nonatomic) IBOutlet UITableView *TVEmpresas;
 
 @end
