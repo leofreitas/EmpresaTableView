@@ -72,6 +72,21 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Empresas *empresa = [empresas objectAtIndex:indexPath.row];
+    NSString *msg =
+    [NSString stringWithFormat:@"Nome: %@\nFuncionarios: %@",
+     empresa.nome, empresa.funcionarios];
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Empresa"
+                                                     message:msg
+                                                    delegate:nil
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil] autorelease];
+    [alert show];
+    [self.TVEmpresas deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 
 - (void)dealloc {
     [_TVEmpresas release];
