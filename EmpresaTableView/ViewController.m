@@ -79,17 +79,57 @@
     [NSString stringWithFormat:@"Nome: %@\nFuncionarios: %@",
      empresa.nome, empresa.funcionarios];
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Empresa"
-                                                     message:msg
-                                                    delegate:nil
-                                           cancelButtonTitle:@"OK"
-                                           otherButtonTitles:nil] autorelease];
+        message:msg
+        delegate:nil
+        cancelButtonTitle:@"OK"
+        otherButtonTitles:nil] autorelease];
     [alert show];
     [self.TVEmpresas deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+// implementando a exclusao no table view
+
+-(void) tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [empresas removeObjectAtIndex:indexPath.row];
+    [self.TVEmpresas reloadData];
+}
+
+//personalizando a mensagem do tableview
+
+-(NSString *) tableView:(UITableView *)tableView
+titleForDeleteConfirmationButtonForRowAtIndexPath:
+(NSIndexPath *)indexPath {
+    return @"Remover";
+}
+
+
+// Executado quando o usuário toca no botão Editar
+- (IBAction)botaoEditarTap:(id)sender {
+    if ([self.botaoEditar.title isEqualToString:@"Editar"]) {
+        [self.TVEmpresas setEditing:YES animated:YES];
+        self.botaoEditar.title = @"Pronto";
+    }else {
+        [self.TVEmpresas setEditing:NO animated:YES];
+        self.botaoEditar.title = @"Editar";
+    }
+}
+
+-(UITableViewCellEditingStyle) tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+        return UITableViewCellEditingStyleDelete;
+}
+
+
+
+
+
 
 - (void)dealloc {
     [_TVEmpresas release];
+    [_botaoEditar release];
+    [_botaoEditar release];
     [super dealloc];
 }
+
 @end
